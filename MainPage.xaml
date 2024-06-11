@@ -1,0 +1,33 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:JournalApp.Models"
+             x:Class="JournalApp.MainPage">
+    <StackLayout>
+        <Button Text="Add Entry" Clicked="AddEntryButton_Clicked" />
+        <CollectionView ItemsSource="{Binding JournalEntries}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout>
+                        <Label Text="{Binding Date, StringFormat='{0:MM/dd/yyyy HH:mm}'}" />
+                        <Label Text="{Binding Text}" />
+                        <CollectionView ItemsSource="{Binding Pictures}">
+                            <CollectionView.ItemTemplate>
+                                <DataTemplate>
+                                    <Image Source="{Binding .}" HeightRequest="100" WidthRequest="100">
+                                        <Image.GestureRecognizers>
+                                            <TapGestureRecognizer Command="{Binding BindingContext.ImageTappedCommand, Source={RelativeSource AncestorType={x:Type local:JournalEntry}}}" CommandParameter="{Binding .}" />
+                                        </Image.GestureRecognizers>
+                                    </Image>
+                                </DataTemplate>
+                            </CollectionView.ItemTemplate>
+                        </CollectionView>
+                        <StackLayout Orientation="Horizontal">
+                            <Button Text="Edit" Clicked="EditEntryButton_Clicked" CommandParameter="{Binding .}" />
+                            <Button Text="Delete" Clicked="DeleteEntryButton_Clicked" CommandParameter="{Binding .}" />
+                        </StackLayout>
+                    </StackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </StackLayout>
+</ContentPage>

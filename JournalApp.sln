@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.34814.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JournalApp", "JournalApp.csproj", "{70C067C2-CAE8-4D75-BA7B-B881A31E9DB4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{70C067C2-CAE8-4D75-BA7B-B881A31E9DB4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70C067C2-CAE8-4D75-BA7B-B881A31E9DB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70C067C2-CAE8-4D75-BA7B-B881A31E9DB4}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{70C067C2-CAE8-4D75-BA7B-B881A31E9DB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70C067C2-CAE8-4D75-BA7B-B881A31E9DB4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{70C067C2-CAE8-4D75-BA7B-B881A31E9DB4}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8CDD43B8-C68E-4A3D-897A-32B8CDDC801F}
+	EndGlobalSection
+EndGlobal

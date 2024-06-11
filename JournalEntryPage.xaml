@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:JournalApp"
+             x:Class="JournalApp.JournalEntryPage">
+
+    <StackLayout>
+        <!-- Date and Entry Text -->
+        <local:DateLabel x:Name="DateLabel" Text="{Binding Date, StringFormat='{0:MM/dd/yyyy HH:mm}'}"/>
+        <local:EntryEditor x:Name="EntryEditor" Text="{Binding Text}"/>
+
+        <!-- Media Options -->
+        <StackLayout Orientation="Horizontal">
+            <Button x:Name="AddPictureButton" Text="Add Picture" Clicked="AddPictureButton_Clicked" />
+            <Button x:Name="TakePictureButton" Text="Take Picture" Clicked="TakePictureButton_Clicked" />
+            <Button x:Name="RecordAudioButton" Text="Record Audio" Clicked="RecordAudioButton_Clicked" />
+            <Button x:Name="AddLocationButton" Text="Add Location" Clicked="AddLocationButton_Clicked" />
+        </StackLayout>
+
+        <!-- Display added pictures -->
+        <CollectionView ItemsSource="{Binding Pictures}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Image Source="{Binding .}" HeightRequest="100" WidthRequest="100"/>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+        <!-- Bookmark and Save Buttons -->
+        <StackLayout Orientation="Horizontal">
+            <Button x:Name="BookmarkButton" Text="Bookmark" Clicked="BookmarkButton_Clicked" />
+            <Button x:Name="SaveButton" Text="Save" Clicked="SaveButton_Clicked" />
+        </StackLayout>
+    </StackLayout>
+</ContentPage>
