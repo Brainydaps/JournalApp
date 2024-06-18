@@ -8,7 +8,7 @@
     Title="JournalApp">
 
     <ShellContent
-        Title="Home"
+        Title="Journal by Brainydaps"
         ContentTemplate="{DataTemplate local:MainPage}"
         Route="MainPage" />
 
