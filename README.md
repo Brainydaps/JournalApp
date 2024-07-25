@@ -14,7 +14,7 @@ JournalApp is a cross-platform journaling application I wrote in C# and built wi
 - **Add voice recordings, add location and bookmark journal entries.**
 
 ## Screenshots
-
+![Screenshot 2024-07-25 at 02 00 29](https://github.com/user-attachments/assets/4c6fd532-3ac1-4952-8c38-e357718596c3)
 ![Screenshot](https://github.com/Brainydaps/JournalApp/assets/41041115/0e255115-246b-4629-a3f1-884ba4b127bd)
 
 
